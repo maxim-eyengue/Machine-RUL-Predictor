@@ -11,7 +11,7 @@
 - [ ] Testing the code: unit tests with pytest
 - [ ] Integration tests with docker-compose
 - [ ] Code quality: linting and formatting
-- [ ] There is a Makefile
+- [x] There is a Makefile
 - [ ] Git pre-commit hooks
 - [ ] There's a CI/CD pipeline
 ---
@@ -133,3 +133,5 @@ Here the working pool with monitoring message:
 
 Finally, we can visualize Prefect UI:
 ![Prefect UI for full deployment](./images/full_deploy_ui.png)
+
+For de

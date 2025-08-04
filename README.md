@@ -33,3 +33,15 @@ The dataset used in this project is **synthetic** and has been generated rather 
 
 ### Project plan
 Detailed instructions have been provided [here](./plan.md).
+
+### Makefile
+There is also a [makefile](./Makefile) that can help settinng the environment. `Make` is installed by deault on Mac but can also be installed online. To run a command, write:
+```sh
+make "add the corresponding tag"
+```
+For example:
+```sh
+make setup_pipelines
+```
+
+---
