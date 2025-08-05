@@ -174,9 +174,20 @@ We then make sure to integrate `isort` and `black` in the configuration file wit
       language_version: python3.9
 ```
 
-We can now update the project on GIT.
+We can now update the project on GIT:
+```sh
+git add.
+git commit -m "pre-commit hooks check"
+git push
+```
+Then once more:
+```sh
+git add.
+git commit -m "pre-commit hooks"
+git push
+```
 
-### Refinements
+### Refinement
 The project was not deployed to the cloud as expected via streaming mode with AWS and Kinesis.
 
 We can work on that...
