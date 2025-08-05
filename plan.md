@@ -11,9 +11,11 @@
 - [ ] Integration tests with docker-compose
 - [x] Code quality: linting with the VSCode pylint extension and formatting with black and isort
 - [x] There is a Makefile
-- [ ] Git pre-commit hooks
+- [x] Git pre-commit hooks
 - [ ] There's a CI/CD pipeline
 ---
+
+The follwoing steps helped us to complete the project:
 
 ### Environment
 First activate the mlops-zoomcamp conda environment that was created for the course:

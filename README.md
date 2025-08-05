@@ -3,9 +3,11 @@
 # Machine-RUL-Predictor
 An application designed to predict the remaining useful life of critical components in construction machinery by using machine data.
 
-# Problem description
+## ## ❓ **Problem Description**
 
 The goal of this project is to **predict the Remaining Useful Life (RUL)** of components of a machine  by analyzing **IoT** and **operations data**. This can be useful for predictive maintenance tasks where we decide on the maintenance to perform on asset data depending on what is the most critical. For example, we can prioritize components with the lower remaining useful life.
+
+### 📊 **Dataset Overview**
 
 <h3>Machine RUL Dataset</h3>
 
@@ -28,13 +30,65 @@ The goal of this project is to **predict the Remaining Useful Life (RUL)** of co
         [Numeric: hours]</li>
 </ul>
 
-### **Disclaimer** 🛑  
-The dataset used in this project is **synthetic** and has been generated rather than collected from real-world sources. ⚠️ Due to the lack of transparency in the data synthesis process, the exact methods and criteria used are **unknown** 🤷‍♂️. As a result, the patterns and relationships within the data may not accurately reflect real-world phenomena 🌍. 
+### **Disclaimer** 🛑
+The dataset used in this project is **synthetic** and has been generated rather than collected from real-world sources. ⚠️ Due to the lack of transparency in the data synthesis process, the exact methods and criteria used are **unknown** 🤷‍♂️. As a result, the patterns and relationships within the data may not accurately reflect real-world phenomena 🌍.
 
-### Project plan
+## 📁 Directory Structure
+
+```plaintext
+Machine-RUL-Predictor/
+│
+├── data/                         # Contains the dataset used for training
+├── env/                          # Contains a requirements file that helps setting up the environment.
+├── images/                       # Illustrations and deployment screenshots
+├── mlflow-models/                # Contains experiments run srtifacts
+├── machine-rul-data.zip          # .zip data file
+├── .gitignore                    # Combines the files to ignore during Git operations
+├── .pre-commit-config.yaml       # Configuration file for Git pre-commit hooks
+├── prefect.yaml                  # Configuration file for prefect project
+├── .prefectignore                # Combines the files to ignore during prefect full deployment
+├── capstone_project.ipynb        # End-to-End Jupyter Notebook with data preparation, analysis, experiment tracking and model monitoring
+├── orchestrate_prefect.py        # Prefect simple orchestration script
+├── orchestrate_full_deploy.py    # Prefect orchestration script for full deployment
+├── mlflow.db                     # backend-store sqlite file for saving metadata during experiment tracking
+├── Makefile                      # Makefile to run faster some commands
+├── run_id.txt                    # Text file containing the experiment run id of the saved model
+├── Pipfile                       # Dependencies for pipenv
+├── Pipfile.lock                  # Locked versions of dependencies
+├── plan.md                       # Detailed plan for building the project
+├── LICENSE                       # Project MIT License
+└── README.md                     # Project description and instructions
+```
+
+## ⚙️ Usage
+
+**Requirements**: Python 3.9
+
+Make sure to clone the repository:
+```bash
+git clone https://github.com/maxim-eyengue/Machine-RUL-Predictor.git
+cd Machine-RUL-Predictor
+```
+You can then check the [plan](#project-plan) and [makefile instructions](#makefile).
+
+## Project plan
 Detailed instructions have been provided [here](./plan.md).
+- [x] Problem description: The problem is well described and it's clear what the problem the project solves
+- [ ] Cloud
+- [x] Experiment tracking and model registry
+: Both experiment tracking and model registry are used
+- [x] Workflow orchestration: Fully deployed workflow orchestration with deployment runs and workpools.
+- [ ] Model deployment
+- [x] Model monitoring: Comprehensive model monitoring that sends an alert if prediction drift is detected
+- [x] Reproducibility: Instructions are clear, it's easy to run the code, and it works. The data is provided and versions for dependencies are specified.
+- [ ] Testing the code: unit tests with pytest
+- [ ] Integration tests with docker-compose
+- [x] Code quality: linting with the VSCode pylint extension and formatting with black and isort
+- [x] There is a Makefile
+- [x] Git pre-commit hooks
+- [ ] There's a CI/CD pipeline
 
-### Makefile
+## Makefile
 There is also a [makefile](./Makefile) that can help setting the environment. `Make` is installed by deault on Mac but can also be installed online. To run a command, write:
 ```sh
 make "add the corresponding command"
@@ -51,5 +105,19 @@ For improving code quality:
 ```sh
 make quality_checks
 ```
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+- Fork the repository.
+- Create a branch for your feature or bug fix.
+- Submit a pull request with a detailed explanation of your changes.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE.txt). Make sure to add this [license](LICENSE.txt) in any of your copy, specifying me as the right owner of the work.
+
 
 ---
