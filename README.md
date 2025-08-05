@@ -35,13 +35,21 @@ The dataset used in this project is **synthetic** and has been generated rather 
 Detailed instructions have been provided [here](./plan.md).
 
 ### Makefile
-There is also a [makefile](./Makefile) that can help settinng the environment. `Make` is installed by deault on Mac but can also be installed online. To run a command, write:
+There is also a [makefile](./Makefile) that can help setting the environment. `Make` is installed by deault on Mac but can also be installed online. To run a command, write:
 ```sh
 make "add the corresponding command"
 ```
-For example, for setting the environment:
+For example, for creating a conda environment:
+```sh
+make conda_env
+```
+For setting the environment:
 ```sh
 make setup
+```
+For improving code quality:
+```sh
+make quality_checks
 ```
 
 ---

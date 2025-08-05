@@ -140,4 +140,12 @@ pipenv install mlflow==2.22.0  scikit-learn==1.5.0  --python=3.9
 pipenv install --dev pytest black isort pre-commit
 ```
 ### Code Quality
-We used the VSCode extension for linting. 
+We used the VSCode extension for linting. For code formatting we can use `black`:
+```sh
+pipenv run black .
+```
+For sorting imports:
+```sh
+pipenv run isort .
+```
+
