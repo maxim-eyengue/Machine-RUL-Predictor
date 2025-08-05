@@ -15,7 +15,7 @@
 - [ ] There's a CI/CD pipeline
 ---
 
-### Environment 
+### Environment
 First activate the mlops-zoomcamp conda environment that was created for the course:
 ```sh
 conda activate mlops-zoomcamp
@@ -113,7 +113,7 @@ prefect worker start --pool "capstonepool"
 ```
 - Deployment can be created using the CLI command:
 ```bash
-prefect deploy orchestrate_full_deploy.py:run --name Rul --pool capstonepool 
+prefect deploy orchestrate_full_deploy.py:run --name Rul --pool capstonepool
 ```
 Note that:
   - `orchestrate_full_deploy.py:run` specifies the flow entry point.
@@ -149,3 +149,36 @@ For sorting imports:
 pipenv run isort .
 ```
 
+### Git pre-commit
+We can now generate a configuration file that will define which hook to run:
+```sh
+pipenv run pre-commit sample-config > .pre-commit-config.yaml
+```
+After creating the config file, we create the actual Git hook script in `.git/hooks`:
+```sh
+pipenv run pre-commit install
+```
+This will oblige us to make sure the pre-commit hooks are all chcked before pushing the project.
+
+We then make sure to integrate `isort` and `black` in the configuration file with:
+```yaml
+- repo: https://github.com/pycqa/isort
+  rev: 6.0.1
+  hooks:
+    - id: isort
+      name: isort (python)
+- repo: https://github.com/psf/black
+  rev: 25.1.0
+  hooks:
+    - id: black
+      language_version: python3.9
+```
+
+We can now update the project on GIT.
+
+### Refinements
+The project was not deployed to the cloud as expected via streaming mode with AWS and Kinesis.
+
+We can work on that...
+
+---
