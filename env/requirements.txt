@@ -1,3 +1,4 @@
 mlflow==2.22
 evidently==0.7.9
 prefect==3.4.6
+pipenv

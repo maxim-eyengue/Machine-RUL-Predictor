@@ -7,10 +7,9 @@
 - [ ] Model deployment
 - [x] Model monitoring: Comprehensive model monitoring that sends an alert if prediction drift is detected
 - [x] Reproducibility: Instructions are clear, it's easy to run the code, and it works. The data is provided and versions for dependencies are specified.
-
 - [ ] Testing the code: unit tests with pytest
 - [ ] Integration tests with docker-compose
-- [ ] Code quality: linting and formatting
+- [x] Code quality: linting with the VSCode pylint extension and formatting with black and isort
 - [x] There is a Makefile
 - [ ] Git pre-commit hooks
 - [ ] There's a CI/CD pipeline
@@ -33,7 +32,7 @@ conda install numpy pandas scikit-learn seaborn jupyter
 
 You need to install some more dependencies for experiment tracking and workflow orchestration:
 ```sh
-pip install -r requirements.txt
+pip install -r env/requirements.txt
 ```
 
 ### End-to-end notebook with experiment tracking and model monitoring
@@ -134,4 +133,11 @@ Here the working pool with monitoring message:
 Finally, we can visualize Prefect UI:
 ![Prefect UI for full deployment](./images/full_deploy_ui.png)
 
-For de
+### Pipfile environment
+For model deployment and best practices a pip environment can be very useful. To install one:
+```sh
+pipenv install mlflow==2.22.0  scikit-learn==1.5.0  --python=3.9
+pipenv install --dev pytest black isort pre-commit
+```
+### Code Quality
+We used the VSCode extension for linting. 

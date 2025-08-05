@@ -37,11 +37,11 @@ Detailed instructions have been provided [here](./plan.md).
 ### Makefile
 There is also a [makefile](./Makefile) that can help settinng the environment. `Make` is installed by deault on Mac but can also be installed online. To run a command, write:
 ```sh
-make "add the corresponding tag"
+make "add the corresponding command"
 ```
-For example:
+For example, for setting the environment:
 ```sh
-make setup_pipelines
+make setup
 ```
 
 ---
