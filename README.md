@@ -3,11 +3,11 @@
 # Machine-RUL-Predictor
 An application designed to predict the remaining useful life of critical components in construction machinery by using machine data.
 
-## ## ❓ **Problem Description**
+## ❓ Problem Description
 
 The goal of this project is to **predict the Remaining Useful Life (RUL)** of components of a machine  by analyzing **IoT** and **operations data**. This can be useful for predictive maintenance tasks where we decide on the maintenance to perform on asset data depending on what is the most critical. For example, we can prioritize components with the lower remaining useful life.
 
-### 📊 **Dataset Overview**
+### 📊 Dataset Overview
 
 <h3>Machine RUL Dataset</h3>
 
