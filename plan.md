@@ -85,7 +85,7 @@ Here is a snapshot:
 ![Orchestration](./images/orchestration.png)
 
 ### For a full deployment of our orchestration file:
-We will first do some refactoring and obtain a new [orchestration file](./orchestrate_full_deploy_.py). This refactoring is for making a local deployment. Then:
+We will first do some refactoring and obtain a new [orchestration file](./orchestrate_full_deploy.py). This refactoring is for making a local deployment. Then:
 - First we run mlflow:
 ```sh
 mlflow server \
